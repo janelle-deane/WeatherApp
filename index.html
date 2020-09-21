@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecasting</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="navbar navbar-dark sticky-top bg-dark justify-content-center">
+        <span class="navbar-brand mb-0 h1">Weather Just for You!</span>
+      </nav>
+<div class="container">
+    <div class="row">
+       <!-- Sidebar with search & previously found cities -->
+        <div class="col-md-3 sideBar">
+            <br>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search City</button>
+              </form>
+              <hr>
+              <div class="previous-search">
+              </div>
+        </div>
+        <div class="col-md-9 weather-info">
+            <div class="row weather-data">
+                <h2 class="city">City & Date Placeholder</h2>
+                <hr>
+                <div class="col-md-6">
+                <p id="temp">Temperature:</p>
+                <p id="humidity">Humidity:</p>
+                <p id="temp">Wind Speed:</p>
+                <p id="temp">UV Index:</p>
+            </div>
+            <div class="col-md-6"></div>
+            </div>
+            <div class="row weather-pics">
+                <h2>5-Day Forecast:</h2>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>   
+</body>
+</html>
