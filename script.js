@@ -11,7 +11,7 @@ submitBtn.on("click", function(event){
     console.log(typeof city);
     console.log(city);
    
-    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q="+city+"&appid=a1ca936a3130768c6b2cc6e68abbd3ec";
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q="+city+"&units=imperial&appid=a1ca936a3130768c6b2cc6e68abbd3ec";
     
 
     // AJAX request
@@ -24,7 +24,12 @@ submitBtn.on("click", function(event){
       // Log the queryURL
       console.log(queryURL);
       // Log the resulting object
+      console.log(response.city.name);
+      console.log(response.list[0].main.temp);
+      console.log(response.list[0].main.humidity);
       console.log(response);
+      
+
 
     });
 
