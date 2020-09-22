@@ -25,12 +25,24 @@ submitBtn.on("click", function(event){
       console.log(queryURL);
       // Log the resulting object
       console.log(response.city.name);
+      // Add it to the made elements
+      var name= $(".city")
+      name.text(response.city.name+"-" + moment().format('L'));
+
       console.log(response.list[0].main.temp);
+      var temp= $("#temp");
+      temp.text("Temperature: "+ response.list[0].main.temp + "F");
+
       console.log(response.list[0].main.humidity);
-      console.log(response);
+      var humidity= $("#humidity");
+      humidity.text("Humidity: "+ response.list[0].main.humidity);
       
+      console.log(response);
 
+      var wind= $("#wind");
+      wind.text("Wind Speed: "+ response.list[0].wind.speed + "MPH");
 
+      
     });
 
 
