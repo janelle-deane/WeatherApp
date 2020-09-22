@@ -36,3 +36,13 @@ border-top:solid 1px rosybrown;
 width: 96%;
 height: 1px;
 }
+
+img{
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.card{
+    color: rgb(73, 59, 59);
+    background: darkolivegreen;
+}
