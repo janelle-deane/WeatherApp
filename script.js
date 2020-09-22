@@ -35,21 +35,24 @@ submitBtn.on("click", function(event){
 
       console.log(response.list[0].main.humidity);
       var humidity= $("#humidity");
-      humidity.text("Humidity: "+ response.list[0].main.humidity);
+      humidity.text("Humidity: "+ response.list[0].main.humidity+"%");
       
       console.log(response);
 
       var wind= $("#wind");
       wind.text("Wind Speed: "+ response.list[0].wind.speed + "MPH");
-
-      
-    });
-
-
+  
+    for (var i = 8; i < 41; i+8) {
+      var icon=response.list[i].weather[0].icon
+      console.log(icon);
+      var iconUrl ="http://openweathermap.org/img/w/" + icon + ".png";
+      weatherIcon=$(`.weatherPic-${i}`).attr("src", iconUrl);
+      // var date5=$("date5").text(moment().add(4, 'day').format('L'))
+      // card.append(weatherIcon)
+    }
+  });
 })
 //take input from search input
 //save city search to local storage and append page
 
-//run ajax to pull temp -convert to f, humidity, wind speed -convert to mph, UV index
-//add data to the page 
 //take 5 day data and put images on page
