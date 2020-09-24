@@ -2,6 +2,12 @@
 
 var submitBtn=$("#submitBtn");
 var cityList=[];
+var oldCity = JSON.parse(localStorage.getItem("city"))
+
+
+// add for loop for the old cities & conditionals if there is nothing in local storage
+var button = $(`<button class="cityBtn">`).text(oldCity);
+$(".previous-search").prepend(button);
 
 
 // On click event 
